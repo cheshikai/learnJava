@@ -1,3 +1,5 @@
+package listlearn;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -28,7 +30,6 @@ public class ClassMembers {
         name.ifPresent(value -> System.out.println(classMembers.getFullName(person) + ": " + value.getScore()));
     }
     private String getFullName(Person person){
-//        person.setFirstName("赵");
         return person.getLastName()+person.getFirstName();
     }
 }

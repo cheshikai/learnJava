@@ -5,29 +5,28 @@
 
 <generatorConfiguration>
     <context id="PostgresqlTables" targetRuntime="MyBatis3">
-        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://39.102.78.187/aliyun?serverTimezone=UTC&amp;characterEncoding=utf-8&amp;useSSL=false&amp;allowPublicKeyRetrieval=true"
-                        userId="pay" password="2008bjAY">
+        <jdbcConnection driverClass="org.postgresql.Driver" connectionURL="jdbc:postgresql://39.102.78.187/postgres" userId="postgres" password="postgres">
         </jdbcConnection>
 
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.dcits.model" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="test.model" targetProject="src">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="com.dcits.xml" targetProject="src/main/java">
+        <sqlMapGenerator targetPackage="test.xml" targetProject="src">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.dcits.dao" targetProject="src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="test.dao" targetProject="src">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table tableName="bank_info"/>
+        <table tableName="tb_pmrgt_fee_proof" >
+        </table>
 
     </context>
 </generatorConfiguration>
