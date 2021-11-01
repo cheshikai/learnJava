@@ -1,7 +1,6 @@
 package com.newcoder.huawei;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class HJ55 {
     public static void main(String[] args) {
